@@ -6,15 +6,14 @@ Implemented a preprocessor to filter/discretize the raw data and following a thr
 ##Usage
 
 ###Contents:
-best.nn <- the best trained neural network
-preprocess.java <- java-coded preprocessor source code
-preprocessor.sh <- shell script for compling and running of preprocess.java
-trainer.java <- java-coded trainer (Back-Propagation algorithm) source code
-trainer.sh <- shell script for compling and running of trainer.java
-readme.txt <- this file
+1. best.nn <- the best trained neural network
+2. preprocess.java <- java-coded preprocessor source code
+3. preprocessor.sh <- shell script for compling and running of preprocess.java
+4. trainer.java <- java-coded trainer (Back-Propagation algorithm) source code
+5. trainer.sh <- shell script for compling and running of trainer.java
+6. raw-training.data <- sample raw data
 
 ###Instruction:
-Both of my preprocess and trainer are coded in Java.
 1. First, prepare a raw training dataset (eg. raw-training.data)
 2. Run `preprocessor.sh` first to preprocess the raw dataset:
       `./preprocessor.sh raw-training.data dataset.dat answer.dat`
@@ -25,7 +24,7 @@ the preprocessed data as an input for the trainer program to optimizedly fit wit
 5. The output of the trainer.sh - best.nn is the result of the trained neural network.
 The trainer will not display anything on the screen but only output the best.nn
 
-###There are two more optional input parameter for the trainer:
+###There are two more optional input parameters for the trainer:
 1. `./trainer.sh dataset.dat answer.dat best.nn <max_iteration>`
     as to indicate the number of the iteration (training loop) for the training
 2. `./trainer.sh dataset.dat answer.dat best.n <max_iteration> <small_sample_mode>`
